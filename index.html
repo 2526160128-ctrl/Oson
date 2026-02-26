@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¿Me perdonas?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+            background-color: #ffe6e6;
+        }
+
+        h1 {
+            color: #d60000;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #si {
+            background-color: #ff4d4d;
+            color: white;
+        }
+
+        #no {
+            background-color: #666;
+            color: white;
+        }
+
+        #mensajeFinal {
+            font-size: 40px;
+            color: #ff0000;
+            margin-top: 20px;
+        }
+
+        #gatito {
+            margin-top: 20px;
+            display: none;
+        }
+
+        img {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="pregunta">¿Me perdonas? 🥺</h1>
+
+    <button id="si">Sí</button>
+    <button id="no">No</button>
+
+    <div id="mensajeFinal"></div>
+
+    <div id="gatito">
+        <img src="https://i.imgur.com/4AiXzf8.jpeg" alt="Gatito con flores">
+        <p>Para ti 💐🐱</p>
+    </div>
+
+    <script>
+        let tamaño = 18;
+
+        document.getElementById("si").onclick = function() {
+            document.getElementById("pregunta").style.display = "none";
+            document.getElementById("si").style.display = "none";
+            document.getElementById("no").style.display = "none";
+
+            document.getElementById("mensajeFinal").innerHTML = "Te amo ❤️";
+            document.getElementById("gatito").style.display = "block";
+        };
+
+        document.getElementById("no").onclick = function() {
+            tamaño += 10;
+            document.getElementById("si").style.fontSize = tamaño + "px";
+        };
+    </script>
+
+</body>
+</html>
